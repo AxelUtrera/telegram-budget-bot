@@ -1,7 +1,7 @@
 {
-  "name": "data-api",
+  "name": "message-handler",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/data-api/src",
+  "sourceRoot": "apps/message-handler/src",
   "projectType": "application",
   "tags": [],
   "targets": {
@@ -12,15 +12,15 @@
         "build"
       ],
       "options": {
-        "buildTarget": "data-api:build",
+        "buildTarget": "message-handler:build",
         "runBuildTargetDependencies": false
       },
       "configurations": {
         "development": {
-          "buildTarget": "data-api:build:development"
+          "buildTarget": "message-handler:build:development"
         },
         "production": {
-          "buildTarget": "data-api:build:production"
+          "buildTarget": "message-handler:build:production"
         }
       }
     },
@@ -28,15 +28,9 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "rm -rf dist/apps/data-api"
+          "rm -rf dist/apps/message-handler"
         ]
       }
-    },
-    "docker-build": {
-      "dependsOn": [
-        "build"
-      ],
-      "command": "docker build -f apps/data-api/Dockerfile . -t data-api"
     }
   }
 }
