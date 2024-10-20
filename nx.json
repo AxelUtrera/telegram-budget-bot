@@ -1,7 +1,10 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
-    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
@@ -12,9 +15,7 @@
       "!{projectRoot}/src/test-setup.[jt]s",
       "!{projectRoot}/test-setup.[jt]s"
     ],
-    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
-  "nxCloudId": "66fa2cda208f2808c4860024",
   "plugins": [
     {
       "plugin": "@nx/webpack/plugin",
@@ -35,7 +36,10 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["apps/data-api-e2e/**/*"]
+      "exclude": [
+        "apps/data-api-e2e/**/*",
+        "apps/message-handler-e2e/**/*"
+      ]
     }
   ]
 }

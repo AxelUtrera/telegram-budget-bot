@@ -6,14 +6,6 @@
     "data-api"
   ],
   "targets": {
-    "build": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": [
-          "tsc -p apps/data-api-e2e/tsconfig.spec.json"
-        ]
-      }
-    },
     "e2e": {
       "executor": "@nx/jest:jest",
       "outputs": [

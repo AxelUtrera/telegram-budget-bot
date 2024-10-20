@@ -1,10 +1,9 @@
-
 const { NxAppWebpackPlugin } = require('@nx/webpack/app-plugin');
 const { join } = require('path');
 
 module.exports = {
   output: {
-    path: join(__dirname, '../../dist/apps/data-api'),
+    path: join(__dirname, '../../dist/apps/message-handler'),
   },
   plugins: [
     new NxAppWebpackPlugin({
@@ -15,7 +14,6 @@ module.exports = {
       optimization: false,
       outputHashing: 'none',
       generatePackageJson: true,
-    })
+    }),
   ],
 };
-
