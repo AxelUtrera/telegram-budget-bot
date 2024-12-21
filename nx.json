@@ -2,8 +2,7 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
     "default": [
-      "{projectRoot}/**/*",
-      "sharedGlobals"
+      "{projectRoot}/**/*"
     ],
     "production": [
       "default",
@@ -14,7 +13,7 @@
       "!{projectRoot}/jest.config.[jt]s",
       "!{projectRoot}/src/test-setup.[jt]s",
       "!{projectRoot}/test-setup.[jt]s"
-    ],
+    ]
   },
   "plugins": [
     {

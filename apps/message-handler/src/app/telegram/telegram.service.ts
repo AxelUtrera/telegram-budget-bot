@@ -3,7 +3,8 @@ import { OnModuleInit, OnModuleDestroy } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { Context, Markup, Telegraf } from "telegraf";
 import { message } from "telegraf/filters";
-import { AudioFileService } from "../shared/audio-file.service";
+import { AudioFileService } from "../shared/audio-file/audio-file.service";
+
 @Injectable()
 export class TelegramService implements OnModuleInit, OnModuleDestroy {
   _logger = new Logger(TelegramService.name);
