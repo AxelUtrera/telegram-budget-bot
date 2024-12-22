@@ -12,15 +12,17 @@
         "build"
       ],
       "options": {
-        "buildTarget": "data-api:build",
-        "runBuildTargetDependencies": false
+        "buildTarget": "data-api:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "data-api:build:development"
+          "buildTarget": "data-api:build:development",
+          "runBuildTargetDependencies": false
         },
         "production": {
-          "buildTarget": "data-api:build:production"
+          "buildTarget": "data-api:build:production",
+          "runBuildTargetDependencies": true,
+          "inspect": false
         }
       }
     },

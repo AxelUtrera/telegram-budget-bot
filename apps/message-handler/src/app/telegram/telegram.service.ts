@@ -21,9 +21,9 @@ export class TelegramService implements OnModuleInit, OnModuleDestroy {
     this._bot = new Telegraf(this.configService.get<string>("TELEGRAM_BOT_TOKEN"));
   }
 
-  onModuleInit() {
+  async onModuleInit() {
     this.initialize_bot();
-    this._bot.launch();
+    await this._bot.launch();
     this._logger.log("🚀 Telegram _bot launched...");
   }
 
