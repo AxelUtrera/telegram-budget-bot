@@ -1,6 +1,6 @@
 import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
-import { AudioFileModule } from "../shared/audio-file.module";
+import { AudioFileModule } from "../shared/audio-file/audio-file.module";
 import { TelegramService } from "./telegram.service";
 
 @Module({
